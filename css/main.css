@@ -9,7 +9,51 @@
     color: var(--main-text-color);
     padding: 0.8rem 1rem;
     border: 1px var(--form-border-color) solid;
-    border-radius: 1.1rem;
+    border-radius: var(--form-border-radius);
     background-color: var(--form-input-background-color);
     font-size: 1rem;
+    font-family: var(--form-font);
+    transition: all 0.2s ease;
+}
+.form-group input:hover {
+    scale: 1.05;
+}
+
+.results-list {
+    display: flex;
+    flex-direction: row;
+    padding: 1.5rem;
+}
+
+.results-item {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    height: 6.8rem;
+    min-width: 6.8rem;
+    padding: 1rem;
+    background-color: var(--result-box-background-color);
+    margin: 0.5rem;
+    font-family: var(--form-font);
+    border-radius: var(--form-border-radius);
+    border: 1px var(--form-border-color) solid;
+}
+
+.results-item dd {
+    margin-top: 5px;
+    font-size: 25px;
+    font-weight: bold;
+    color: var(--main-text-color);
+}
+
+.results-item dt {
+    font-size: 15px;
+    font-weight: bold;
+    color: var(--form-accent-color);
+}
+
+#alerts p{
+    font-family: var(--form-font);
+    color: var(--error-color);
+    
 }

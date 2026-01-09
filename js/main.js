@@ -8,6 +8,7 @@ const PERCENTAGES = {
     spending: 0.1
 };
 
+const MIN_INCOME = 0.01
 const form = document.getElementById("income-form");
 const incomeInput = document.getElementById("income");
 
@@ -30,25 +31,24 @@ function incomeCalculations(income) {
 }
 
 function updateResults(results) {
-    stocksOutput.textContent = `Stocks & Shares ISA: £${results.stocks.toFixed(2)}`;
-    cashOutput.textContent = `Cash ISA: £${results.cash.toFixed(2)}`;
-    spendingOutput.textContent = `Spending Money: £${results.spending.toFixed(2)}`;
+    stocksOutput.textContent = `£${results.stocks.toLocaleString(undefined, {minimumFractionDigits: 2, maximumFractionDigits: 2})}`;
+    cashOutput.textContent = `£${results.cash.toLocaleString(undefined, {minimumFractionDigits: 2, maximumFractionDigits: 2})}`;
+    spendingOutput.textContent = `£${results.spending.toLocaleString(undefined, {minimumFractionDigits: 2, maximumFractionDigits: 2})}`;
 }
 
 //-------------------
 // Event Listeners
 // -------------------
 
-form.addEventListener('submit', function(event){
-    event.preventDefault();
+incomeInput.addEventListener('input', function(event){
     const incomeValue = parseFloat(incomeInput.value.trim());
 
-    errorMessage.textContent = "";
-
-    if(isNaN(incomeValue) || incomeValue <= 0) {
+    if(isNaN(incomeValue) || incomeValue < MIN_INCOME) {
         errorMessage.textContent = "Please add an income greater than 0";
         return;
     }
+    
+    errorMessage.textContent = "";
 
     const results = incomeCalculations(incomeValue);
     updateResults(results);
