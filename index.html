@@ -12,8 +12,22 @@
 </head>
 <body>
     
-     
+    <main>
+        <h1 class="">How Much Was It This Month?</h1>
+        <form id="income-form">
+            <div class="form-group">
+                <label for="income">Income (£): </label>
+                <input type="number" id="income" name="income" min="0" max="99999" step="1" required>
+            </div>
+            <button type="submit">Calculate</button>
+        </form>
+    </main>
 
+    <section id="results" aria-live="polite">
+        <p id="stocks-isa">Stocks & Shares ISA: £0</p>
+        <p id="cash-isa">Cash ISA: £0</p>
+        <p id="spending">Spending Money: £0</p>
+    </section>
 
     <script src="js/main.js" defer></script>
 </body>
