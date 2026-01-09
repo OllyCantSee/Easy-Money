@@ -2,14 +2,13 @@
 // Constants & DOM Elements
 // -------------------
 
-
 const PERCENTAGES = {
     stocks: 0.6,
     cash: 0.3,
     spending: 0.1
 };
 
-const form = document.getElementById('income-form');
+const form = document.getElementById("income-form");
 const incomeInput = document.getElementById("income");
 
 const stocksOutput = document.getElementById("stocks-isa");

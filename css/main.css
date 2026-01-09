@@ -1,0 +1,15 @@
+#page-title {
+    font-family: var(--header-font);
+    font-size: var(--header-font-size);
+    color: var(--main-text-color);
+}
+
+.form-group input {
+    outline: none;
+    color: var(--main-text-color);
+    padding: 0.8rem 1rem;
+    border: 1px var(--form-border-color) solid;
+    border-radius: 1.1rem;
+    background-color: var(--form-input-background-color);
+    font-size: 1rem;
+}
