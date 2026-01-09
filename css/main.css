@@ -2,6 +2,9 @@
     font-family: var(--header-font);
     font-size: var(--header-font-size);
     color: var(--main-text-color);
+    display: flex;
+    gap: 1rem;
+    align-items: baseline;
 }
 
 .form-group input {
@@ -54,6 +57,10 @@
 
 #alerts p{
     font-family: var(--form-font);
-    color: var(--error-color);
-    
+    color: var(--error-color);    
+}
+
+#fun-text {
+    font-size: 1rem;
+    color: var(--form-accent-color);
 }
